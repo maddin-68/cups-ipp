@@ -275,7 +275,12 @@ class Job implements JobInterface
         	$mimeType = MimeType::fromFilename($filename);
         }
 
-        return $this->addBinary(fopen($filename, 'r'), $name, $mimeType);
+        if ($mimeType === null && class_exists(finfo::class) ) {
+        	$finfo = new finfo(FILEINFO_MIME_TYPE);
+        	$mimeType = $finfo->buffer(fopen($filename, 'r'));
+        }
+
+        $mimeType = is_string($mimeType) ? $mimeType : 'application/octet-stream';
 
         $this->content[] = [
           'type' => self::CONTENT_FILE,
@@ -285,32 +290,6 @@ class Job implements JobInterface
         ];
 
         return $this;
-    }
-
-    /**
-     * @param string $binary
-     * @param string $name
-     * @param string $mimeType
-     *
-     * @return Job
-     */
-    public function addBinary($handle, $name, $mimeType = null)
-    {
-    	if ($mimeType === null && class_exists(finfo::class) ) {
-    		$finfo = new finfo(FILEINFO_MIME_TYPE);
-    		$mimeType = $finfo->buffer($handle);
-    	}
-
-    	$mimeType = is_string($mimeType) ? $mimeType : 'application/octet-stream';
-
-    	$this->content[] = [
-    		'type' => self::CONTENT_FILE,
-    		'name' => $name,
-    		'mimeType' => $mimeType,
-    		'binary' => stream_get_contents($handle),
-    	];
-
-    	return $this;
     }
 
     /**
