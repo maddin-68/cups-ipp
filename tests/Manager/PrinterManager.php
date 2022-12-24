@@ -1,18 +1,17 @@
 <?php
 
-namespace Smalot\Cups\Tests\Units\Manager;
+namespace Maddin\Cups\Tests\Units\Manager;
 
-use mageekguy\atoum;
-use Smalot\Cups\Builder\Builder;
-use Smalot\Cups\Model\Printer;
-use Smalot\Cups\Model\PrinterInterface;
-use Smalot\Cups\Transport\Client;
-use Smalot\Cups\Transport\ResponseParser;
+use Maddin\Cups\Builder\Builder;
+use Maddin\Cups\Model\Printer;
+use Maddin\Cups\Transport\Client;
+use Maddin\Cups\Transport\ResponseParser;
+use atoum\atoum;
 
 /**
  * Class PrinterManager
  *
- * @package Smalot\Cups\Tests\Units\Manager
+ * @package Maddin\Cups\Tests\Units\Manager
  */
 class PrinterManager extends atoum\test
 {
@@ -25,7 +24,7 @@ class PrinterManager extends atoum\test
         $client = new Client();
         $responseParser = new ResponseParser();
 
-        $printerManager = new \Smalot\Cups\Manager\PrinterManager($builder, $client, $responseParser);
+        $printerManager = new \Maddin\Cups\Manager\PrinterManager($builder, $client, $responseParser);
         $printerManager->setCharset('utf-8');
         $printerManager->setLanguage('fr-fr');
         $printerManager->setOperationId(5);
@@ -46,7 +45,7 @@ class PrinterManager extends atoum\test
         $client = new Client();
         $responseParser = new ResponseParser();
 
-        $printerManager = new \Smalot\Cups\Manager\PrinterManager($builder, $client, $responseParser);
+        $printerManager = new \Maddin\Cups\Manager\PrinterManager($builder, $client, $responseParser);
         $printerManager->setCharset('utf-8');
         $printerManager->setLanguage('fr-fr');
         $printerManager->setOperationId(5);
@@ -67,7 +66,7 @@ class PrinterManager extends atoum\test
         $client = new Client();
         $responseParser = new ResponseParser();
 
-        $printerManager = new \Smalot\Cups\Manager\PrinterManager($builder, $client, $responseParser);
+        $printerManager = new \Maddin\Cups\Manager\PrinterManager($builder, $client, $responseParser);
         $printers = $printerManager->getList();
 
         $this->array($printers)->size->isGreaterThanOrEqualTo(1);
@@ -97,7 +96,7 @@ class PrinterManager extends atoum\test
         $client->setAuthentication($user, $password);
         $responseParser = new ResponseParser();
 
-        $printerManager = new \Smalot\Cups\Manager\PrinterManager($builder, $client, $responseParser);
+        $printerManager = new \Maddin\Cups\Manager\PrinterManager($builder, $client, $responseParser);
 
         $printer = new Printer();
         $printer->setUri($this->printerUri);
@@ -126,7 +125,7 @@ class PrinterManager extends atoum\test
         $client->setAuthentication($user, $password);
         $responseParser = new ResponseParser();
 
-        $printerManager = new \Smalot\Cups\Manager\PrinterManager($builder, $client, $responseParser);
+        $printerManager = new \Maddin\Cups\Manager\PrinterManager($builder, $client, $responseParser);
 
         $printer = new Printer();
         $printer->setUri($this->printerUri);
@@ -142,11 +141,11 @@ class PrinterManager extends atoum\test
         $client = new Client();
         $responseParser = new ResponseParser();
 
-        $printerManager = new \Smalot\Cups\Manager\PrinterManager($builder, $client, $responseParser);
+        $printerManager = new \Maddin\Cups\Manager\PrinterManager($builder, $client, $responseParser);
 
         // Reset status
         $printer = $printerManager->getDefault();
-        $this->object($printer)->isInstanceOf('\Smalot\Cups\Model\Printer');
+        $this->object($printer)->isInstanceOf('\Maddin\Cups\Model\Printer');
         $this->string($printer->getUri())->isEqualTo($this->printerUri);
         //        $this->string($printer->getStatus())->isEqualTo('idle');
     }

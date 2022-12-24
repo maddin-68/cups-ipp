@@ -1,12 +1,12 @@
 <?php
 
 
-namespace Smalot\Cups;
+namespace Maddin\Cups;
 
 /**
  * Class CupsException
  *
- * @package Smalot\Cups
+ * @package Maddin-68\Cups
  */
 class CupsException extends \Exception
 {

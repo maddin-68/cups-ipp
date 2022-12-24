@@ -1,13 +1,13 @@
 <?php
 
-namespace Smalot\Cups\Transport;
+namespace Maddin\Cups\Transport;
 
 use Psr\Http\Message\ResponseInterface;
 
 /**
  * Class Response
  *
- * @package Smalot\Cups\Transport
+ * @package Maddin-68\Cups\Transport
  */
 class Response
 {

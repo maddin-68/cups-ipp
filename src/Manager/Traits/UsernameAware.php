@@ -1,11 +1,11 @@
 <?php
 
-namespace Smalot\Cups\Manager\Traits;
+namespace Maddin\Cups\Manager\Traits;
 
 /**
  * Trait UsernameAware
  *
- * @package Smalot\Cups\Manager\Traits
+ * @package Maddin-68\Cups\Manager\Traits
  */
 trait UsernameAware
 {

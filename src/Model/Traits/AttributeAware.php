@@ -1,11 +1,11 @@
 <?php
 
-namespace Smalot\Cups\Model\Traits;
+namespace Maddin\Cups\Model\Traits;
 
 /**
  * Trait AttributeAware
  *
- * @package Smalot\Cups\Model\Traits
+ * @package Maddin-68\Cups\Model\Traits
  */
 trait AttributeAware
 {

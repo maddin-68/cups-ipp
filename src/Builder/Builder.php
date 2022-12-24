@@ -1,14 +1,14 @@
 <?php
 
-namespace Smalot\Cups\Builder;
+namespace Maddin\Cups\Builder;
 
-use Smalot\Cups\CupsException;
+use Maddin\Cups\CupsException;
 use Symfony\Component\Yaml\Parser;
 
 /**
  * Class Builder
  *
- * @package Smalot\Cups\Builder
+ * @package Maddin-68\Cups\Builder
  */
 class Builder
 {
@@ -71,7 +71,7 @@ class Builder
      * @param string $string
      *
      * @return string
-     * @throws \Smalot\Cups\CupsException
+     * @throws \Maddin-68\Cups\CupsException
      */
     public function formatStringLength($string)
     {
@@ -99,7 +99,7 @@ class Builder
      * @param string $value
      *
      * @return string
-     * @throws \Smalot\Cups\CupsException
+     * @throws \Maddin-68\Cups\CupsException
      */
     public function formatInteger($value)
     {
@@ -168,7 +168,7 @@ class Builder
      * @param bool $emptyIfMissing
      *
      * @return string
-     * @throws \Smalot\Cups\CupsException
+     * @throws \Maddin-68\Cups\CupsException
      */
     public function buildProperty($name, $values, $emptyIfMissing = false)
     {
@@ -256,7 +256,7 @@ class Builder
      * @param string $name
      *
      * @return array
-     * @throws \Smalot\Cups\CupsException
+     * @throws \Maddin-68\Cups\CupsException
      */
     public function getTypeFromProperty($name)
     {

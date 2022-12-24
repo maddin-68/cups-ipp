@@ -1,14 +1,15 @@
 <?php
 
-namespace Smalot\Cups\Tests\Units\Transport;
+namespace Maddin\Cups\Tests\Units\Transport;
 
 use Psr\Http\Message\RequestInterface;
-use Smalot\Cups\Transport\Client as BaseClient;
+use Maddin\Cups\Transport\Client as BaseClient;
+use Psr\Http\Message\ResponseInterface;
 
 /**
  * Class Client
  *
- * @package Smalot\Cups\Tests\Units\Transport
+ * @package Maddin-68\Cups\Tests\Units\Transport
  */
 class Client extends BaseClient
 {
@@ -26,7 +27,7 @@ class Client extends BaseClient
     /**
      * @inheritDoc
      */
-    public function sendRequest(RequestInterface $request)
+    public function sendRequest(RequestInterface $request): ResponseInterface
     {
         $this->lastRequest = $request;
         $this->lastResponse = parent::sendRequest($request);

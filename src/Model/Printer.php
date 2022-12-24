@@ -1,11 +1,11 @@
 <?php
 
-namespace Smalot\Cups\Model;
+namespace Maddin\Cups\Model;
 
 /**
  * Class Printer
  *
- * @package Smalot\Cups\Model
+ * @package Maddin-68\Cups\Model
  */
 class Printer implements PrinterInterface
 {

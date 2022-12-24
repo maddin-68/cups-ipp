@@ -1,11 +1,11 @@
 <?php
 
-namespace Smalot\Cups\Model;
+namespace Maddin\Cups\Model;
 
 /**
  * Class Job
  *
- * @package Smalot\Cups\Model
+ * @package Maddin-68\Cups\Model
  */
 class Job implements JobInterface
 {

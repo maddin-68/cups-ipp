@@ -1,32 +1,32 @@
 <?php
 
-namespace Smalot\Cups\Manager;
+namespace Maddin\Cups\Manager;
 
 use Http\Client\HttpClient;
-use Smalot\Cups\Builder\Builder;
-use Smalot\Cups\CupsException;
-use Smalot\Cups\Model\Job;
-use Smalot\Cups\Model\JobInterface;
-use Smalot\Cups\Model\PrinterInterface;
-use Smalot\Cups\Transport\Response as CupsResponse;
+use Maddin\Cups\Builder\Builder;
+use Maddin\Cups\CupsException;
+use Maddin\Cups\Model\Job;
+use Maddin\Cups\Model\JobInterface;
+use Maddin\Cups\Model\PrinterInterface;
+use Maddin\Cups\Transport\Response as CupsResponse;
 use GuzzleHttp\Psr7\Request;
 
 /**
  * Class Job
  *
- * @package Smalot\Cups\Manager
+ * @package Maddin-68\Cups\Manager
  */
 class JobManager extends ManagerAbstract
 {
 
     /**
-     * @param \Smalot\Cups\Model\PrinterInterface $printer
+     * @param \Maddin-68\Cups\Model\PrinterInterface $printer
      * @param bool $myJobs
      * @param int $limit
      * @param string $whichJobs
      * @param bool $subset
      *
-     * @return \Smalot\Cups\Model\JobInterface[]
+     * @return \Maddin-68\Cups\Model\JobInterface[]
      */
     public function getList(
       PrinterInterface $printer,
@@ -55,11 +55,11 @@ class JobManager extends ManagerAbstract
     }
 
     /**
-     * @param \Smalot\Cups\Model\JobInterface $job
+     * @param \Maddin-68\Cups\Model\JobInterface $job
      * @param bool $subset
      * @param string $attributesGroup
      *
-     * @return \Smalot\Cups\Model\JobInterface
+     * @return \Maddin-68\Cups\Model\JobInterface
      */
     public function reloadAttributes(JobInterface $job, $subset = false, $attributesGroup = 'all')
     {
@@ -78,7 +78,7 @@ class JobManager extends ManagerAbstract
     }
 
     /**
-     * @param \Smalot\Cups\Model\PrinterInterface $printer
+     * @param \Maddin-68\Cups\Model\PrinterInterface $printer
      * @param JobInterface $job
      * @param int $timeout
      *
@@ -120,7 +120,7 @@ class JobManager extends ManagerAbstract
     }
 
     /**
-     * @param \Smalot\Cups\Model\JobInterface $job
+     * @param \Maddin-68\Cups\Model\JobInterface $job
      * @param array $update
      * @param array $delete
      *
@@ -216,7 +216,7 @@ class JobManager extends ManagerAbstract
     }
 
     /**
-     * @param \Smalot\Cups\Model\PrinterInterface $printer
+     * @param \Maddin-68\Cups\Model\PrinterInterface $printer
      * @param bool $myJobs
      * @param int $limit
      * @param string $whichJobs
@@ -280,7 +280,7 @@ class JobManager extends ManagerAbstract
     }
 
     /**
-     * @param \Smalot\Cups\Model\JobInterface $job
+     * @param \Maddin-68\Cups\Model\JobInterface $job
      * @param bool $subset
      * @param string $attributesGroup
      *
@@ -336,7 +336,7 @@ class JobManager extends ManagerAbstract
     }
 
     /**
-     * @param \Smalot\Cups\Model\JobInterface $job
+     * @param \Maddin-68\Cups\Model\JobInterface $job
      * @param array $update
      * @param array $delete
      *
@@ -379,7 +379,7 @@ class JobManager extends ManagerAbstract
     }
 
     /**
-     * @param \Smalot\Cups\Model\PrinterInterface $printer
+     * @param \Maddin-68\Cups\Model\PrinterInterface $printer
      * @param JobInterface $job
      * @param int $timeout
      *
@@ -428,7 +428,7 @@ class JobManager extends ManagerAbstract
     }
 
     /**
-     * @param \Smalot\Cups\Model\JobInterface $job
+     * @param \Maddin-68\Cups\Model\JobInterface $job
      *
      * @return \GuzzleHttp\Psr7\Request
      */
@@ -462,7 +462,7 @@ class JobManager extends ManagerAbstract
     }
 
     /**
-     * @param \Smalot\Cups\Model\JobInterface $job
+     * @param \Maddin-68\Cups\Model\JobInterface $job
      *
      * @return \GuzzleHttp\Psr7\Request
      */
@@ -494,7 +494,7 @@ class JobManager extends ManagerAbstract
     }
 
     /**
-     * @param \Smalot\Cups\Model\JobInterface $job
+     * @param \Maddin-68\Cups\Model\JobInterface $job
      * @param string $until
      *
      * @return \GuzzleHttp\Psr7\Request
@@ -548,7 +548,7 @@ class JobManager extends ManagerAbstract
     }
 
     /**
-     * @param \Smalot\Cups\Model\JobInterface $job
+     * @param \Maddin-68\Cups\Model\JobInterface $job
      *
      * @return \GuzzleHttp\Psr7\Request
      */
@@ -580,7 +580,7 @@ class JobManager extends ManagerAbstract
     }
 
     /**
-     * @param \Smalot\Cups\Model\JobInterface $job
+     * @param \Maddin-68\Cups\Model\JobInterface $job
      * @param array $part
      * @param bool $isLast
      *
@@ -633,10 +633,10 @@ class JobManager extends ManagerAbstract
     }
 
     /**
-     * @param \Smalot\Cups\Model\JobInterface $job
+     * @param \Maddin-68\Cups\Model\JobInterface $job
      * @param $item
      *
-     * @return \Smalot\Cups\Model\JobInterface
+     * @return \Maddin-68\Cups\Model\JobInterface
      */
     protected function fillAttributes(JobInterface $job, $item)
     {

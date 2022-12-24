@@ -4,13 +4,13 @@ CUPS Implementation of IPP - PHP Client API
 
 CUPS (Common Unix Printing System) is a modular printing system for Unix-like computer operating systems which allows a computer to act as a print server. A computer running CUPS is a host that can accept print jobs from client computers, process them, and send them to the appropriate printer.
 
-[![Build Status](https://travis-ci.org/smalot/cups-ipp.png?branch=master)](https://travis-ci.org/smalot/cups-ipp)
-[![Current Version](https://poser.pugx.org/smalot/cups-ipp/v/stable.png)](https://packagist.org/packages/smalot/cups-ipp)
-[![composer.lock](https://poser.pugx.org/smalot/cups-ipp/composerlock)](https://packagist.org/packages/smalot/cups-ipp)
+[![Build Status](https://travis-ci.org/maddin-68/cups-ipp.png?branch=master)](https://travis-ci.org/maddin-68/cups-ipp)
+[![Current Version](https://poser.pugx.org/maddin-68/cups-ipp/v/stable.png)](https://packagist.org/packages/maddin-68/cups-ipp)
+[![composer.lock](https://poser.pugx.org/maddin-68/cups-ipp/composerlock)](https://packagist.org/packages/maddin-68/cups-ipp)
 
-[![Total Downloads](https://poser.pugx.org/smalot/cups-ipp/downloads.png)](https://packagist.org/packages/smalot/cups-ipp)
-[![Monthly Downloads](https://poser.pugx.org/smalot/cups-ipp/d/monthly)](https://packagist.org/packages/smalot/cups-ipp)
-[![Daily Downloads](https://poser.pugx.org/smalot/cups-ipp/d/daily)](https://packagist.org/packages/smalot/cups-ipp)
+[![Total Downloads](https://poser.pugx.org/maddin-68/cups-ipp/downloads.png)](https://packagist.org/packages/maddin-68/cups-ipp)
+[![Monthly Downloads](https://poser.pugx.org/maddin-68/cups-ipp/d/monthly)](https://packagist.org/packages/maddin-68/cups-ipp)
+[![Daily Downloads](https://poser.pugx.org/maddin-68/cups-ipp/d/daily)](https://packagist.org/packages/maddin-68/cups-ipp)
 
 
 ## Install via Composer
@@ -18,7 +18,7 @@ CUPS (Common Unix Printing System) is a modular printing system for Unix-like co
 You can install the component using [Composer](https://getcomposer.org/).
 
 ````sh
-composer require smalot/cups-ipp
+composer require maddin-68/cups-ipp
 ````
 
 Then, require the `vendor/autoload.php` file to enable the autoloading mechanism provided by Composer.
@@ -42,10 +42,10 @@ First of all, check if you have correct access to this file: `/var/run/cups/cups
 
 include 'vendor/autoload.php';
 
-use Smalot\Cups\Builder\Builder;
-use Smalot\Cups\Manager\PrinterManager;
-use Smalot\Cups\Transport\Client;
-use Smalot\Cups\Transport\ResponseParser;
+use Maddin\Cups\Builder\Builder;
+use Maddin\Cups\Manager\PrinterManager;
+use Maddin\Cups\Transport\Client;
+use Maddin\Cups\Transport\ResponseParser;
 
 $client = new Client();
 $builder = new Builder();
@@ -68,11 +68,11 @@ foreach ($printers as $printer) {
 
 include 'vendor/autoload.php';
 
-use Smalot\Cups\Builder\Builder;
-use Smalot\Cups\Manager\JobManager;
-use Smalot\Cups\Manager\PrinterManager;
-use Smalot\Cups\Transport\Client;
-use Smalot\Cups\Transport\ResponseParser;
+use Maddin\Cups\Builder\Builder;
+use Maddin\Cups\Manager\JobManager;
+use Maddin\Cups\Manager\PrinterManager;
+use Maddin\Cups\Transport\Client;
+use Maddin\Cups\Transport\ResponseParser;
 
 $client = new Client();
 $builder = new Builder();
@@ -98,12 +98,12 @@ foreach ($jobs as $job) {
 
 include 'vendor/autoload.php';
 
-use Smalot\Cups\Builder\Builder;
-use Smalot\Cups\Manager\JobManager;
-use Smalot\Cups\Manager\PrinterManager;
-use Smalot\Cups\Model\Job;
-use Smalot\Cups\Transport\Client;
-use Smalot\Cups\Transport\ResponseParser;
+use Maddin\Cups\Builder\Builder;
+use Maddin\Cups\Manager\JobManager;
+use Maddin\Cups\Manager\PrinterManager;
+use Maddin\Cups\Model\Job;
+use Maddin\Cups\Transport\Client;
+use Maddin\Cups\Transport\ResponseParser;
 
 $client = new Client();
 $builder = new Builder();

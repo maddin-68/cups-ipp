@@ -1,6 +1,6 @@
 <?php
 
-namespace Smalot\Cups\Transport;
+namespace Maddin\Cups\Transport;
 
 use GuzzleHttp\Psr7\Uri;
 use Http\Client\Common\Plugin\AddHostPlugin;
@@ -12,12 +12,13 @@ use Http\Client\HttpClient;
 use Http\Client\Socket\Client as SocketHttpClient;
 use Http\Message\MessageFactory\GuzzleMessageFactory;
 use Psr\Http\Message\RequestInterface;
-use Smalot\Cups\CupsException;
+use Maddin\Cups\CupsException;
+use Psr\Http\Message\ResponseInterface;
 
 /**
  * Class Client
  *
- * @package Smalot\Cups\Transport
+ * @package Maddin-68\Cups\Transport
  */
 class Client implements HttpClient
 {
@@ -116,7 +117,7 @@ class Client implements HttpClient
     /**
      * (@inheritdoc}
      */
-    public function sendRequest(RequestInterface $request)
+    public function sendRequest(RequestInterface $request): ResponseInterface
     {
         if ($this->username || $this->password) {
             switch ($this->authType) {
