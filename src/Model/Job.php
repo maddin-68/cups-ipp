@@ -2,6 +2,9 @@
 
 namespace Maddin\Cups\Model;
 
+use GuzzleHttp\Psr7\MimeType;
+use finfo;
+
 /**
  * Class Job
  *
@@ -269,7 +272,7 @@ class Job implements JobInterface
         }
 
         if ($mimeType === null ) {
-        	$mimeType = mimetype_from_filename($mimeType);
+        	$mimeType = MimeType::fromFilename($filename);
         }
 
         return $this->addBinary(fopen($filename, 'r'), $name, $mimeType);
@@ -293,8 +296,8 @@ class Job implements JobInterface
      */
     public function addBinary($handle, $name, $mimeType = null)
     {
-    	if ($mimeType === null && class_exists(\finfo::class) ) {
-    		$finfo = new \finfo(FILEINFO_MIME_TYPE);
+    	if ($mimeType === null && class_exists(finfo::class) ) {
+    		$finfo = new finfo(FILEINFO_MIME_TYPE);
     		$mimeType = $finfo->buffer($handle);
     	}
 
