@@ -15,10 +15,10 @@
         "php-http/client-common": "^2.6",
         "php-http/message": "^1.13",
         "guzzlehttp/psr7": "^2.4",
-        "symfony/yaml": "^6.2"
+        "symfony/yaml": "^6.0"
     },
     "require-dev": {
-        "symfony/error-handler": "^6.2",
+        "symfony/error-handler": "^6.0",
         "atoum/atoum": "^4.1"
     },
     "minimum-stability": "dev",
