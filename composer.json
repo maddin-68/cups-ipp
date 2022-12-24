@@ -10,16 +10,16 @@
         }
     ],
     "require": {
-        "php": ">=7.2",
+        "php": ">=7.4",
         "php-http/socket-client": "^2.1",
         "php-http/client-common": "^2.6",
         "php-http/message": "^1.13",
-        "guzzlehttp/psr7": "^1.9",
-        "symfony/yaml": "^4.4||^5.4"
+        "guzzlehttp/psr7": "^2.4",
+        "symfony/yaml": "^6.2"
     },
     "require-dev": {
-        "symfony/error-handler": "^6.0",
-        "atoum/atoum": "^4.0"
+        "symfony/error-handler": "^6.2",
+        "atoum/atoum": "^4.1"
     },
     "minimum-stability": "dev",
     "prefer-stable": true,
